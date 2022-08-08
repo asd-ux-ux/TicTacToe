@@ -197,13 +197,13 @@ body {
 	position: absolute;
     width: 6px;
     height: 500px;
-    background-color: green;
     z-index: 1;
     transform: translateX(-50%);
     border-radius: 5px;
-    animation-duration: 3s;
-  	animation-name: line;
-  	animation-play-state: paused;
+	background: linear-gradient(0deg, rgba(51, 175, 18, 1) 70%, rgba(255, 255, 255, 0) 70%);
+	background-size: 400% 400%;
+	animation: gradient 3s ease-out;
+	background-position: 0% 100%;
 }
 
 .nextRound {
@@ -228,15 +228,15 @@ body {
     color: red;
 }
 
-/*@keyframes line {
-	from {
-		height: 1px;
+@keyframes gradient {
+	0% {
+		background-position: 0% 0%;
 	}
 
-	to {
-		height: 500px;
+	100% {
+		background-position: 0% 100%;
 	}
-}*/
+}
 
 @keyframes smoothOccur {
 	from {
